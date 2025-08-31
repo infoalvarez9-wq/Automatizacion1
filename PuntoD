@@ -1,0 +1,30 @@
+# Pedir datos
+mes = input("Dime un mes: ").strip().lower()
+dia = int(input("Dime el número del día: "))
+diaL = str(dia)
+
+# Definir meses con su cantidad de días y estación
+meses = {   # Diccionario 
+    "enero": (31, "primavera"), #tupla de días por mes  y las estaciones por mes
+    "febrero": (28, "invierno"),   
+    "marzo": (31, "invierno"),
+    "abril": (30, "verano"),
+    "mayo": (31, "verano"),
+    "junio": (30, "invierno"),
+    "julio": (31, "invierno"),
+    "agosto": (31, "primavera"),
+    "septiembre": (30, "primavera"),
+    "octubre": (31, "invierno"),
+    "noviembre": (30, "invierno"),
+    "diciembre": (31, "invierno")
+}
+
+# Verifica si el mes que ingresa el usuario es válido
+if mes in meses:
+    dias_validos, estacion = meses[mes]
+    if 1 <= dia <= dias_validos:
+        print(f"En {mes.capitalize()} {diaL} estaríamos en {estacion}")
+    else:
+        print("El día ingresado no es válido para ese mes")
+else:
+    print("El mes ingresado no es válido")

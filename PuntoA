@@ -1,0 +1,6 @@
+def operaciones_basicas(): # sirve para definir una nueva función. 
+    num1=float(input("Dame un dividendo: "))
+    num2=int(input("Dame el divisor: "))
+    resultado=num1/num2
+    print(resultado)
+operaciones_basicas()

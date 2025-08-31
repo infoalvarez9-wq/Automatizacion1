@@ -1,0 +1,22 @@
+def calculadora():
+  numero1=float(input("Ingrese un numero: "))
+  numero2=float(input("Ingrese un numero: "))
+  operacion=str(input("Ingrese la operacion que desea realizar: "))
+  if operacion=="+":
+    resultado=numero1+numero2
+  elif operacion=="-":
+    resultado=numero1-numero2
+  elif operacion=="*":
+    resultado=numero1*numero2
+  elif operacion=="/":
+    if numero2==0:
+      resultado=("No se puede dividir entre 0")
+    else:
+      resultado=numero1/numero2
+  elif operacion=="%":
+    resultado=numero1%numero2
+  else:
+    resultado=("Operacion no valida")
+  print("El resultado de la operacion es: ",resultado)
+
+calculadora()

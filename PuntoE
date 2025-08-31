@@ -1,0 +1,13 @@
+import numpy as np
+n=int(input("Ingrese un numero de filas: "))
+m=int(input("Ingrese un numero de columnas: "))
+aleatorio=np.random.randint(10,size=(n,m))
+matrizCeros=np.zeros([n,m])
+for o in range(matrizCeros.shape[0]):
+  for k in range(matrizCeros.shape[1]):
+    matrizCeros[o,k]=input("Dame un valor ")
+
+total=aleatorio+matrizCeros
+print("matriz aleatoria","\n",aleatorio,"\n")
+print("matriz usuario""\n",matrizCeros,"\n")
+print("suma","\n",total,"\n")
